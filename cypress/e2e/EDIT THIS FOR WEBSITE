@@ -1,0 +1,19 @@
+describe('lesson3spec', () => {
+
+    it('passes', () => {
+  
+        cy.visit('https://saucedemo.com')
+        
+        function enterLogin(credentials) {
+            cy.get('[data-test="username"]').type('have.value', 'standard_user')
+            cy.get('[data-test="password"').type('have.value', 'secret_sauce') 
+            cy.get('data-test="login-button"]').click()
+        }
+  
+        cy.get('[data-test="item-0-title-link"] > [data-test="inventory-item-name"]').should('contain', 'Sauce Labs Bike Light')
+cy.get('[data-test="item-0-title-link"] > [data-test="inventory-item-name"]').click()
+
+cy.get('[data-test="add-to-cart"]').should('contain', 'Add to Cart')
+cy.get('[data-test="add-to-cart"]').click
+    })
+  })
