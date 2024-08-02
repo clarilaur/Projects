@@ -1,4 +1,4 @@
-describe('alertsandframes', () => {
+describe('frames', () => {
 
     it('passes', () => {
  // Testing frames:
@@ -9,14 +9,14 @@ describe('alertsandframes', () => {
         // Here, I want to load frame and assert: 
        cy.get('ul li').each(($li) => {
         //Single frame
-        cy.frameLoaded('#frame1'); // Ensure the iframe is loaded
-        cy.iframe('#frame1').click(); // Example action, adjust as needed
-        cy.iframe('#frame1').should('have.value', ''); // Example assertion, adjust as needed
+        cy.frameLoaded('#frame1'); 
+        cy.iframe('#frame1').click(); 
+        cy.iframe('#frame1').should('have.value', ''); 
           
         // Nested frame:
         cy.frameLoaded('#frame2'); 
         cy.iframe('#frame2').click(); 
-        cy.iframe('#frame2').should('have.value', ''); // Example assertion, adjust as needed
+        cy.iframe('#frame2').should('have.value', ''); 
       
      });
 

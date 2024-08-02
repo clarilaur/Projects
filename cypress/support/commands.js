@@ -4,6 +4,20 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     // failing the test
     return false
   })
+  import './commands'
+  Cypress.Commands.add('login', (user) => {
+    cy.session(
+      user.username,
+      () => {
+        cy.visit('https://demo.applitools.com/');
+        cy.get('#username').type(user.username); // Use user.username here
+        cy.get('#password').type(user.password); // Add this to type the password
+        cy.get('#log-in').click();
+        cy.url().should('exist');
+      },
+      
+    );
+  });
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
