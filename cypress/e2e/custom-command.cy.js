@@ -12,4 +12,3 @@ describe('login_spec.cy', () => {
 })
 //1. visit website, log in user name and password, assert that we are in the site, 
 //click on a link on the website
-//take screenshot of it logged in, remember you can chain command together 
