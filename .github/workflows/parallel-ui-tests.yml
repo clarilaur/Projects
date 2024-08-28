@@ -20,10 +20,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4.1.7
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v4.0.3
-      with:
-        node-version: '16'  # Use the Node.js version required for your tests
 
     - name: Install dependencies
       run: npm install
