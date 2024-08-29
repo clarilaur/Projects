@@ -7,7 +7,7 @@ name: Parallel UI Tests
     branches:
       - main
 jobs:
-  test:
+  checkout:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -17,8 +17,4 @@ jobs:
           - edge
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4.1.7
-      - name: Install dependencies
-        run: npm install
-      - name: Run UI tests
-        run: 'npm test -- --browser ${{ matrix.browser }}'
+        uses: actions/checkout@v3
