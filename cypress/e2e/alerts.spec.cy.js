@@ -1,4 +1,4 @@
-describe('alertsandframes', () => {
+describe('alerts', () => {
 
     it('passes', () => {
   
